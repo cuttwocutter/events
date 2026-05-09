@@ -2,13 +2,11 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
-
 export default function Hero() {
     return (
         <section
             className="relative min-h-[78vh] bg-cover bg-center flex items-center"
-            style={{ backgroundImage: `url('${basePath}/1.jpg')` }}
+            style={{ backgroundImage: `url('/banner.jpg')` }}
         >
             <div className="absolute inset-0 bg-black/70" />
             <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-white">
