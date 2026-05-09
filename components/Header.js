@@ -1,6 +1,7 @@
 "use client";
 import Image from 'next/image';
 import Link from "next/link";
+import { getImageUrl } from "../lib/utils";
 
 export default function Header() {
     return (
@@ -10,7 +11,7 @@ export default function Header() {
                 <div className="flex items-center gap-3">
                     <Link href="/">
                         <Image
-                            src="/cut_two_cutter_logo.svg"
+                            src={getImageUrl("/cut_two_cutter_logo.svg")}
                             alt="Company Logo"
                             width={100}
                             height={50}
