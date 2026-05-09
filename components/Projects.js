@@ -1,3 +1,4 @@
+import { getImageUrl } from "@/lib/utils";
 import { portfolioProjects } from "../lib/data";
 
 export default function Projects() {
@@ -12,7 +13,7 @@ export default function Projects() {
                 <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {portfolioProjects.map((project) => (
                         <div key={project.id} className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm hover:shadow-lg transition">
-                            <img src={project.image} alt={project.title} className="h-64 w-full object-cover" />
+                            <img src={getImageUrl(project.image)} alt={project.title} className="h-64 w-full object-cover" />
                             <div className="p-6">
                                 <h3 className="text-xl font-semibold">{project.title}</h3>
                                 <p className="mt-3 text-slate-600">{project.location}</p>
