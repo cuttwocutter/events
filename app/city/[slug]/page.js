@@ -23,7 +23,7 @@ export default async function CityPage({ params }) {
         <main className="bg-white text-slate-900">
             <Header />
             <section className="px-6 py-16 md:px-10 lg:px-16 max-w-6xl mx-auto">
-                <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">{city.name}</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-primary">{city.name}</p>
                 <h1 className="mt-4 text-4xl font-semibold">Stall Design and Fabricator in {city.name}</h1>
                 <p className="mt-5 text-slate-600 max-w-3xl">Local exhibition stall design, fabrication and branding services tailored for {city.name}'s busiest trade shows and events.</p>
 

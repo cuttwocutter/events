@@ -6,7 +6,7 @@ export default function Services() {
         <main className="bg-white text-slate-900">
             <Header />
             <section className="px-6 py-16 md:px-10 lg:px-16 max-w-6xl mx-auto">
-                <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">Services</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-primary">Services</p>
                 <h1 className="mt-4 text-4xl font-semibold">Custom exhibition stall design, fabrication and branding</h1>
                 <p className="mt-5 text-slate-600 max-w-3xl">We deliver complete exhibition booth solutions with premium 3D design, octanorm graphic printing, indoor and outdoor fabrication, and full shop branding.</p>
 

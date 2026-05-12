@@ -7,7 +7,7 @@ export default function CityIndex() {
         <main className="bg-white text-slate-900">
             <Header />
             <section className="px-6 py-16 md:px-10 lg:px-16 max-w-7xl mx-auto">
-                <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">Cities</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-primary">Cities</p>
                 <h1 className="mt-4 text-4xl font-semibold">City-specific stall design and fabrication</h1>
                 <p className="mt-5 text-slate-600 max-w-3xl">Find dedicated exhibition stall services in these major Indian cities.</p>
 

@@ -7,7 +7,7 @@ export default function Portfolio() {
         <main className="bg-white text-slate-900">
             <Header />
             <section className="px-6 py-16 md:px-10 lg:px-16 max-w-7xl mx-auto">
-                <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">Portfolio</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-primary">Portfolio</p>
                 <h1 className="mt-4 text-4xl font-semibold">Stall design and branding projects</h1>
                 <p className="mt-5 text-slate-600 max-w-3xl">Browse our featured exhibition stalls and branding installations across India.</p>
 

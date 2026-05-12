@@ -6,7 +6,7 @@ export default function Projects() {
         <section className="py-16 px-6 md:px-10 lg:px-16 bg-slate-50">
             <div className="max-w-7xl mx-auto">
                 <div className="mb-10">
-                    <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">Portfolio</p>
+                    <p className="text-sm uppercase tracking-[0.35em] text-primary">Portfolio</p>
                     <h2 className="mt-4 text-3xl md:text-4xl font-semibold">Featured Exhibition Stall Projects</h2>
                 </div>
 

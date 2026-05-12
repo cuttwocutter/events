@@ -6,7 +6,7 @@ export default function About() {
         <main className="bg-white text-slate-900">
             <Header />
             <section className="px-6 py-16 md:px-10 lg:px-16 max-w-6xl mx-auto">
-                <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">About Us</p>
+                <p className="text-sm uppercase tracking-[0.35em] text-primary">About Us</p>
                 <h1 className="mt-4 text-4xl font-semibold">A PAN India exhibition stall design and fabrication partner</h1>
                 <p className="mt-5 text-slate-600 max-w-3xl">GST registered, backed by local production houses, and experienced in end-to-end exhibition stall execution from design to installation.</p>
 

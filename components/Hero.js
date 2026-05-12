@@ -36,7 +36,7 @@ export default function Hero() {
                 </motion.p>
 
                 <div className="mt-10 flex flex-wrap gap-4">
-                    <Link href="/contact" className="rounded-full bg-[#ffcc00] px-8 py-3 text-black font-semibold shadow-lg hover:bg-[#f0b600] transition">
+                    <Link href="/contact" className="rounded-full bg-secondary px-8 py-3 text-primary font-semibold shadow-lg hover:bg-primary hover:text-white transition">
                         Get Free Quote
                     </Link>
                     <Link href="https://wa.me/919999999999" className="rounded-full bg-white/10 px-8 py-3 text-white border border-white hover:bg-white/20 transition">

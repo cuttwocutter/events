@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { useState } from "react";
 import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Categories from "../components/Categories";
@@ -8,6 +10,27 @@ import InterestingFacts from "../components/InterestingFacts";
 import { services, industries, cities, clients, exhibitions } from "../lib/data";
 
 export default function Home() {
+  // Group exhibitions by city
+  const exhibitionsByCity = exhibitions.reduce((acc, event) => {
+    if (!acc[event.city]) {
+      acc[event.city] = [];
+    }
+    acc[event.city].push(event.name);
+    return acc;
+  }, {});
+
+  const [expandedCities, setExpandedCities] = useState(new Set());
+
+  const toggleCity = (city) => {
+    const newExpanded = new Set(expandedCities);
+    if (newExpanded.has(city)) {
+      newExpanded.delete(city);
+    } else {
+      newExpanded.add(city);
+    }
+    setExpandedCities(newExpanded);
+  };
+
   return (
     <main className="bg-white text-slate-900">
       <Header />
@@ -16,7 +39,7 @@ export default function Home() {
       <section className="py-16 px-6 md:px-10 lg:px-16 max-w-7xl mx-auto">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">Services</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-primary">Services</p>
             <h2 className="mt-4 text-3xl md:text-4xl font-semibold">Delivering premium exhibition stalls, printing and branding solutions.</h2>
             <p className="mt-5 text-slate-600 max-w-2xl">From custom 3D stall design to octanorm printing and shop branding, we deliver polished execution for exhibitions across India.</p>
           </div>
@@ -43,7 +66,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
             <div>
-              <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">Industries</p>
+              <p className="text-sm uppercase tracking-[0.35em] text-primary">Industries</p>
               <h2 className="mt-4 text-3xl md:text-4xl font-semibold">Industries We Serve</h2>
             </div>
             <Link href="/services" className="text-sm font-semibold text-[#0f172a] underline underline-offset-4">Explore full service details</Link>
@@ -61,8 +84,8 @@ export default function Home() {
 
       <section className="py-16 px-6 md:px-10 lg:px-16 max-w-7xl mx-auto">
         <div className="mb-10">
-          <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">SEO Gold</p>
-          <h2 className="mt-4 text-3xl md:text-4xl font-semibold">city-wise stall design and fabrication</h2>
+          <p className="text-sm uppercase tracking-[0.35em] text-primary">SEO Gold</p>
+          <h2 className="mt-4 text-3xl md:text-4xl font-semibold">City-wise stall design and fabrication</h2>
           <p className="mt-4 text-slate-600 max-w-3xl">Local teams, national coverage and city-specific expertise for Delhi, Mumbai, Bangalore and the biggest exhibition destinations in India.</p>
         </div>
 
@@ -112,12 +135,12 @@ export default function Home() {
       <section className="py-16 px-6 md:px-10 lg:px-16 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10">
           <div>
-            <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">Trusted by clients</p>
+            <p className="text-sm uppercase tracking-[0.35em] text-primary">Trusted by clients</p>
             <h2 className="mt-4 text-3xl md:text-4xl font-semibold">Upcoming exhibitions</h2>
           </div>
         </div>
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div>
           {/* <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <h3 className="font-semibold text-xl">Clients</h3>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
@@ -128,9 +151,28 @@ export default function Home() {
           </div> */}
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <h3 className="font-semibold text-xl">Upcoming Exhibitions</h3>
-            <div className="mt-5 space-y-3">
-              {exhibitions.map((event) => (
-                <div key={event} className="rounded-2xl bg-slate-50 p-4 text-slate-700">{event}</div>
+            <div className="mt-5 space-y-4">
+              {Object.entries(exhibitionsByCity).map(([city, events]) => (
+                <div key={city} className="border-b border-slate-100 pb-4 last:border-b-0">
+                  <button
+                    onClick={() => toggleCity(city)}
+                    className="w-full flex items-center justify-between text-left font-medium text-lg text-primary mb-2 hover:text-primary/80 transition-colors"
+                  >
+                    <span>{city}</span>
+                    <span className={`transform transition-transform duration-200 ${expandedCities.has(city) ? 'rotate-180' : ''}`}>
+                      ▼
+                    </span>
+                  </button>
+                  {expandedCities.has(city) && (
+                    <div className="space-y-2 animate-in slide-in-from-top-2 duration-200">
+                      {events.map((event) => (
+                        <div key={event} className="rounded-2xl bg-slate-50 p-3 text-slate-700 text-sm">
+                          {event}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
@@ -139,6 +181,6 @@ export default function Home() {
 
       <Projects />
       <CTA />
-    </main>
+    </main >
   );
 }
