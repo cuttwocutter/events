@@ -62,7 +62,7 @@ export default function Home() {
       <section className="py-16 px-6 md:px-10 lg:px-16 max-w-7xl mx-auto">
         <div className="mb-10">
           <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">SEO Gold</p>
-          <h2 className="mt-4 text-3xl md:text-4xl font-semibold">City-wise Stall Design and Fabrication</h2>
+          <h2 className="mt-4 text-3xl md:text-4xl font-semibold">city-wise stall design and fabrication</h2>
           <p className="mt-4 text-slate-600 max-w-3xl">Local teams, national coverage and city-specific expertise for Delhi, Mumbai, Bangalore and the biggest exhibition destinations in India.</p>
         </div>
 
@@ -113,22 +113,19 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 mb-10">
           <div>
             <p className="text-sm uppercase tracking-[0.35em] text-[#f59e0b]">Trusted by clients</p>
-            <h2 className="mt-4 text-3xl md:text-4xl font-semibold">Client list & upcoming exhibitions</h2>
+            <h2 className="mt-4 text-3xl md:text-4xl font-semibold">Upcoming exhibitions</h2>
           </div>
-          <Link href="/contact" className="inline-flex items-center rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-100 transition">
-            Download Company Profile / Brief Form
-          </Link>
         </div>
 
         <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          {/* <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <h3 className="font-semibold text-xl">Clients</h3>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               {clients.map((client) => (
                 <div key={client} className="rounded-2xl bg-slate-50 p-4 text-slate-700">{client}</div>
               ))}
             </div>
-          </div>
+          </div> */}
           <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <h3 className="font-semibold text-xl">Upcoming Exhibitions</h3>
             <div className="mt-5 space-y-3">

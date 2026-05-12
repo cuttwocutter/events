@@ -39,9 +39,6 @@ export default function Hero() {
                     <Link href="/contact" className="rounded-full bg-[#ffcc00] px-8 py-3 text-black font-semibold shadow-lg hover:bg-[#f0b600] transition">
                         Get Free Quote
                     </Link>
-                    <Link href="/portfolio" className="rounded-full border border-white px-8 py-3 text-white hover:bg-white/10 transition">
-                        View Portfolio
-                    </Link>
                     <Link href="https://wa.me/919999999999" className="rounded-full bg-white/10 px-8 py-3 text-white border border-white hover:bg-white/20 transition">
                         WhatsApp Now
                     </Link>
