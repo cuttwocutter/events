@@ -17,7 +17,7 @@ export default function Portfolio() {
                             <img src={getImageUrl(project.image)} alt={project.title} className="h-72 w-full object-cover" />
                             <div className="p-6">
                                 <h2 className="text-xl font-semibold">{project.title}</h2>
-                                <p className="mt-3 text-slate-600">{project.location}</p>
+                                {/* <p className="mt-3 text-slate-600">{project.location}</p> */}
                             </div>
                         </div>
                     ))}
