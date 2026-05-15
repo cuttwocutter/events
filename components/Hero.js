@@ -6,9 +6,15 @@ import { getImageUrl } from "../lib/utils";
 export default function Hero() {
     return (
         <section
-            className="relative min-h-[78vh] bg-cover bg-center flex items-center"
-            style={{ backgroundImage: `url('${getImageUrl('/1.jpg')}')` }}
+            className="relative min-h-[78vh] bg-cover flex items-center"
+            style={{ backgroundImage: `url('${getImageUrl('/hero.jpeg')}')`, backgroundPosition: 'center 25%' }}
         >
+            <img
+                src={getImageUrl('/hero-mobile.jpeg')}
+                alt="Hero mobile"
+                className="absolute inset-0 w-full h-full object-cover md:hidden"
+                style={{ objectPosition: 'center 25%' }}
+            />
             <div className="absolute inset-0 bg-black/70" />
             <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 text-white">
                 <motion.p
