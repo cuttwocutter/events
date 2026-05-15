@@ -54,7 +54,7 @@ export default function Hero() {
                             Get Free Quote
                         </Link>
                         <Link
-                            href="https://wa.me/919999999999"
+                            href="https://wa.me/918920940789"
                             className="rounded-full bg-white/10 px-8 py-3 text-white border border-white hover:bg-white/20 transition"
                         >
                             WhatsApp Now
@@ -100,7 +100,7 @@ export default function Hero() {
                 </div>
             </section>
             <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/918920940789"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="fixed right-4 bottom-4 z-50 inline-flex h-14 w-14 items-center justify-center rounded-full bg-green-500 text-white shadow-xl transition hover:bg-green-600"
