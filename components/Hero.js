@@ -42,6 +42,9 @@ export default function Hero() {
                     <Link href="https://wa.me/919999999999" className="rounded-full bg-white/10 px-8 py-3 text-white border border-white hover:bg-white/20 transition">
                         WhatsApp Now
                     </Link>
+                    <Link href="/contact/brief" className="rounded-full bg-white/10 px-8 py-3 text-white border border-white hover:bg-white/20 transition">
+                        Fill Brief Form
+                    </Link>
                 </div>
 
                 <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
