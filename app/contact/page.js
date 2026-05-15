@@ -26,6 +26,10 @@ export default function Contact() {
                                 <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Email</p>
                                 <p className="mt-3 font-semibold text-slate-900">contact@cuttwocutter.in</p>
                             </a>
+                            <a href="/" className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-sm hover:bg-slate-100 transition">
+                                <p className="text-sm uppercase tracking-[0.35em] text-slate-500">Address</p>
+                                <p className="mt-3 font-semibold text-slate-900">Greater Noida West, Gaur city 1, Sector 4, Greater Noida, Ghaziabad, Uttar Pradesh 201318</p>
+                            </a>
                         </div>
                     </div>
 
