@@ -53,8 +53,8 @@ export default async function CityPage({ params }) {
                     <h2 className="text-2xl font-semibold">Ready to book your {city.name} exhibition stall?</h2>
                     <p className="mt-4 text-slate-600">Contact our {city.name} team for a fast quote, local production support and end-to-end stall delivery.</p>
                     <div className="mt-8 flex flex-wrap gap-4">
-                        <a href="https://wa.me/919999999999" className="rounded-full bg-[#ffcc00] px-8 py-3 text-black font-semibold">WhatsApp Now</a>
-                        <a href="tel:+919999999999" className="rounded-full border border-slate-300 px-8 py-3 text-slate-900">Call Us</a>
+                        <a href="https://wa.me/918920940789" className="rounded-full bg-[#ffcc00] px-8 py-3 text-black font-semibold">WhatsApp Now</a>
+                        <a href="tel:+918920940789" className="rounded-full border border-slate-300 px-8 py-3 text-slate-900">Call Us</a>
                     </div>
                 </div>
             </section>
